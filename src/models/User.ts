@@ -1,6 +1,8 @@
 import { faker } from '@faker-js/faker';
+import { Mappable } from './Map';
 
-export class User {
+//Using 'implements' so TypeScript can point us to the root cause of the error in case of failing to implement the Interface
+export class User implements Mappable {
   name: string;
   location: {
     lat: number;

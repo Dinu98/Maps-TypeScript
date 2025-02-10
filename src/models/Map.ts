@@ -1,6 +1,6 @@
 //This interface acts as instructions to other classes
 //About what they need to implement to be a valid argument for "addMarker"
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     lng: number;
