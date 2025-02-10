@@ -5,6 +5,7 @@ interface Mappable {
     lat: number;
     lng: number;
   };
+  markerContent(): string;
 }
 
 export class Map {
@@ -34,7 +35,7 @@ export class Map {
 
     marker.addListener('click', () => {
       const infoWindow = new google.maps.InfoWindow({
-        content: 'Hello World',
+        content: mappable.markerContent(),
       });
 
       infoWindow.open(this.map, marker);
